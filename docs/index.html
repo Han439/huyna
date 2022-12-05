@@ -202,6 +202,8 @@
           particles = new ParticlePool(settings.particles.length),
           particleRate = settings.particles.length / settings.particles.duration, // particles/sec
           time;
+          context.font = '16px Arial';
+          context.fillText('Hello World', canvas.width / 2, canvas.height / 2);
 
         // get point on heart with -PI <= t <= PI
         function pointOnHeart(t) {
@@ -240,7 +242,7 @@
           }
           context.closePath();
           // create the fill
-          context.fillStyle = '#ea80b0';
+          context.fillStyle = '#3B185F';
           context.fill();
           // create the image
           var image = new Image();
