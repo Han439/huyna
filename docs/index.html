@@ -267,7 +267,7 @@
           context.font = '20px sans-serif';
 
           var textString = "Hello look at me!!!",
-          textWidth = ctx.measureText(textString ).width;
+          textWidth = context.measureText(textString ).width;
 
 
           context.fillText(textString , (canvas.width/2) - (textWidth / 2), 100);
