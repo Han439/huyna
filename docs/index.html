@@ -202,14 +202,7 @@
           particles = new ParticlePool(settings.particles.length),
           particleRate = settings.particles.length / settings.particles.duration, // particles/sec
           time;
-          context.fillStyle = "#003300";
-          context.font = '20px sans-serif';
-
-          var textString = "Hello look at me!!!",
-          textWidth = ctx.measureText(textString ).width;
-
-
-          context.fillText(textString , (canvas.width/2) - (textWidth / 2), 100);
+          
 
         // get point on heart with -PI <= t <= PI
         function pointOnHeart(t) {
@@ -268,7 +261,17 @@
 
           // clear canvas
           context.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // create text
+          context.fillStyle = "#003300";
+          context.font = '20px sans-serif';
 
+          var textString = "Hello look at me!!!",
+          textWidth = ctx.measureText(textString ).width;
+
+
+          context.fillText(textString , (canvas.width/2) - (textWidth / 2), 100);
+          
           // create new particles
           var amount = particleRate * deltaTime;
           for (var i = 0; i < amount; i++) {
