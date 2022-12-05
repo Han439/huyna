@@ -202,10 +202,6 @@
           particles = new ParticlePool(settings.particles.length),
           particleRate = settings.particles.length / settings.particles.duration, // particles/sec
           time;
-          context.font = '16px Arial';
-          context.fillText('Hello World', canvas.width / 2, canvas.height / 2);
-          context.fillStyle = "white";
-          context.textAlign = "center";
 
         // get point on heart with -PI <= t <= PI
         function pointOnHeart(t) {
@@ -256,7 +252,10 @@
         function render() {
           // next animation frame
           requestAnimationFrame(render);
-
+          context.font = '16px Arial';
+          context.fillText('Hello World', canvas.width / 2, canvas.height / 2);
+          context.fillStyle = "white";
+          context.textAlign = "center";
           // update time
           var newTime = new Date().getTime() / 1000,
             deltaTime = newTime - (time || newTime);
